@@ -1,0 +1,97 @@
+{%load staticfiles%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{%static 'css\MainStyle.css'%}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>formulario</title>
+</head>
+<body class="color-fondo">
+	<div>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light" >
+		  <div class="container-fluid">
+				<img src="https://i.ibb.co/3FwpPxZ/d21639fb-61ed-44c0-bb72-df9698e523fe.png" alt="d21639fb-61ed-44c0-bb72-df9698e523fe" width="120"  border="0">
+
+		    </a>
+		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+		        <li class="nav-item">
+		          <a class="nav-link active" aria-current="page" href="https://www.asus.com/">INCRIPCION</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="https://www.asus.com/">REGIONES</a>
+		        </li>
+		        <li class="nav-item dropdown">
+		          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		            SECCIONES
+		          </a>
+		          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+		            <li><a class="dropdown-item" href="https://www.asus.com/">Patrocinadores</a></li>
+		            <li><a class="dropdown-item" href="https://www.asus.com/">Reglas de Torneo</a></li>
+		            <li><hr class="dropdown-divider"></li>
+		            <li><a class="dropdown-item" href="https://www.asus.com/">Torneos</a></li>
+		            <li><a class="dropdown-item" href="https://www.asus.com/  ">Pcs especificaciones</a></li>
+		            <li><a class="dropdown-item" href="https://www.asus.com/">Fundadores</a></li>
+		          </ul>
+		        </li>
+		      </ul>
+		      <form class="d-flex">
+		        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+		        <button class="btn btn-outline-success" type="submit">Search</button>
+		      </form>
+		    </div>
+		  </div>
+		</nav>
+	</div>
+            <form  method="post" class="row g-3">
+                {% csrf_token %}
+              <div class="col-md-6"  >
+                <label for="inputEmail4" class="form-label">Nombre</label>
+                <input alt=" " name="nombre" type="text" class="form-control" id="inputEmail4">
+              </div>
+              <div class="col-12">
+                <label for="inputAddress" class="form-label">Apellido</label>
+                <input name="apellido" type="text" class="form-control" id="inputAddress" >
+              </div>
+              <div class="col-12">
+                <label for="inputAddress2" class="form-label">Fecha de Nacimiento</label>
+                <input name="naci" type="date" class="form-control" id="inputAddress2" placeholder="fecha de nacimiento">
+              </div>
+              <div class="col-12">
+                <label for="inputAddress" class="form-label">Salario</label>
+                <input name="salario" type="number" min="0" value="0"  step="any" slclass="form-control" id="inputAddress3" placeholder="salario">
+              </div>
+              <div class="col-12">
+                <label for="inputAddress2" class="form-label">Telefono</label>
+                <input name="telefono" type="text" class="form-control" id="inputAddress4" placeholder=" numero de telefono">
+              </div>
+              <div class="col-12">
+                <label for="inputAddress2" class="form-label">Direccion</label>
+                <input name="direccion" type="text" class="form-control" id="inputAddress5" placeholder="direccion">
+              </div>
+              <br>
+              <br>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary">Registrarse</button>
+              </div>
+            </form>
+            <div>
+                <br>
+                <br>
+                <div>
+                    <div class="btn-group">
+                    <a href="{%url 'webprogra:tablas'%}">Ver Empleados</a>
+                    </div>
+                </div>
+
+            </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+</html>

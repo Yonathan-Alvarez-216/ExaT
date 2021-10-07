@@ -1,0 +1,24 @@
+.color-fondo{
+	background-color: #1A5276 ;
+}
+.carousel-item{
+	width: 1750px;
+	height: 500px;
+	
+}
+.container{
+	display: flex;
+	justify-content: center;
+	margin: 25px;
+}
+.img{
+	height: 500px;
+	width: 1100px;
+
+}
+.lol{
+	margin: 50px;
+}
+.video{
+	margin: 50px;
+}
